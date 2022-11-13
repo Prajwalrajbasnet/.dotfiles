@@ -107,11 +107,15 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 # tab completion for color ls
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Custom aliases
-alias llc='colorls -lA --sd'
-alias lc='colorls'
+# alias llc='colorls -lA --sd'
+# alias lc='colorls'
+
+alias ls='lsd'
+alias lsa='lsd -a'
+alias tree='lsd --tree'
 
 # Add environment variables to PATH
 # export PATH="$HOME/.sdkman/bin/sdkman-init.sh:$PATH"
