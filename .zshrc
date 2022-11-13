@@ -114,12 +114,11 @@ alias llc='colorls -lA --sd'
 alias lc='colorls'
 
 # Add environment variables to PATH
-export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
-export PATH="$HOME/.sdkman/bin/sdkman-init.sh:$PATH"
+# export PATH="$HOME/.sdkman/bin/sdkman-init.sh:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Source nvm
 source /usr/share/nvm/init-nvm.sh
@@ -132,8 +131,8 @@ eval $(keychain --eval --quiet ~/.ssh/id_rsa_bitbucket)
 [ -s "/home/z3ngis/.bun/_bun" ] && source "/home/z3ngis/.bun/_bun"
 
 # Bun
-export BUN_INSTALL="/home/z3ngis/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export BUN_INSTALL="/home/z3ngis/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
