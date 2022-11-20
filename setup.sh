@@ -12,9 +12,9 @@ mkdir -p $old_dir
 echo "...done"
 
 # move existing dotfiles to old dir and create symlinks
-for $file in $files; do
-  echo "Moving $file to $old_dir"
-  mv -p $file $old_dir/
+for file in $files; do
+  echo "Moving ~/$file to $old_dir"
+  mv ~/$file $old_dir/
   
   echo "Creating symlink for $file from the dotfiles"
   ln -s -r $file ~/$file
