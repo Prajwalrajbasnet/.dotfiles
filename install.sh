@@ -7,7 +7,7 @@ echo "...done"
 
 echo "Installing AUR packages..."
 # install unofficial packages from AUR repository
-yay -S --needed --noconfirm - < ~/pkglist_aur.txt
+yay -S --needed --noconfirm - < ./pkglist_aur.txt
 echo "...done"
 
 # Install other tools/packages without package managers
