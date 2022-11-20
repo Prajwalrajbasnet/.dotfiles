@@ -1,4 +1,5 @@
-android-tools
+zsh
+tmux
 bat
 discord
 docker
@@ -13,7 +14,6 @@ inxi
 lsd
 nano-syntax-highlighting
 neofetch
-nvm
 vim
 vlc
 obs-studio
@@ -26,7 +26,7 @@ qbittorrent
 starship
 terminus-font
 terraform
-texlive-latexextra
-wkhtmltopdf
 xclip
 thefuck
+keychain
+alacritty
