@@ -11,13 +11,10 @@ openvpn3
 optimus-manager-qt
 postman-bin
 powerstat
-python2
 slack-desktop
-steam-manjaro
 stremio-beta
 viber
 visual-studio-code-bin
-yay-git
 zoom
 authy
 spotify
