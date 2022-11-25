@@ -19,3 +19,4 @@ zoom
 authy
 spotify
 steam
+rofi-greenclip

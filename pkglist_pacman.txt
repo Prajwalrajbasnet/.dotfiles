@@ -30,3 +30,6 @@ xclip
 thefuck
 keychain
 alacritty
+arandr
+brightnessctl
+light
