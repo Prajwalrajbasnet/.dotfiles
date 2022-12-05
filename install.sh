@@ -10,6 +10,10 @@ echo "Installing AUR packages..."
 yay -S --needed --noconfirm - < ./pkglist_aur.txt
 echo "...done"
 
+# clone tpm for tmux
+echo "Downloading tpm for tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Install other tools/packages without package managers
 echo "Installing ohmyzsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
