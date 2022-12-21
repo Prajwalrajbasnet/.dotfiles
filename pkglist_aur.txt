@@ -20,3 +20,4 @@ authy
 spotify
 steam
 rofi-greenclip
+blueman
