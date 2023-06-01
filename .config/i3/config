@@ -277,10 +277,13 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
-bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+# bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+
+# Use flameshot for screenshots
+bindsym Print exec flameshot gui
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -325,8 +328,10 @@ for_window [class=jetbrains-datagrip] focus
 for_window [class=postman] focus
 
 # move workspace to monitor on left
-bindsym $mod+m move workspace to output left
+# bindsym $mod+m move workspace to output left
 
+# move workspace to monitor on top
+bindsym $mod+m move workspace to output up
 ##############
 # compositor #
 ##############
@@ -384,8 +389,10 @@ exec --no-startup-id dex --autostart --environment i3
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
-
+# horizontal setup:
+# exec --no-startup-id ~/.screenlayout/monitor.sh
+# vertical setup:
+exec --no-startup-id ~/.screenlayout/monitor-vertical.sh
 # set wallpaper
 exec --no-startup-id sleep 2 && nitrogen --restore
 # exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
