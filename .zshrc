@@ -117,6 +117,7 @@ alias ls='lsd'
 alias lsa='lsd -a'
 alias tree='lsd --tree'
 
+alias dc='docker-compose'
 # Add environment variables to PATH
 # export PATH="$HOME/.sdkman/bin/sdkman-init.sh:$PATH"
 
