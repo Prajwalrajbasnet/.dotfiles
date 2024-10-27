@@ -21,3 +21,4 @@ spotify
 steam
 rofi-greenclip
 blueman
+kalker

@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export DISABLE_AUTO_TITLE=true
+
 # include jump around (z) plugin
 # . ~/z.sh
 
@@ -100,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"'
 
 # Init starship prompt
@@ -117,7 +119,15 @@ alias ls='lsd'
 alias lsa='lsd -a'
 alias tree='lsd --tree'
 
-alias dc='docker-compose'
+alias dc='docker compose'
+alias vim='nvim'
+
+alias dkrkill='docker ps -q | xargs docker stop'
+
+alias zsrc='source ~/.zshrc'
+
+alias kctl='kubectl'
+
 # Add environment variables to PATH
 # export PATH="$HOME/.sdkman/bin/sdkman-init.sh:$PATH"
 
@@ -169,3 +179,17 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+
+function loadenv() {
+	set -o allexport && source ${1:-.env} && set +o allexport
+}
+
+function blamefr() {
+	git blame -w -C -C -C -L $2,$3 $1
+} 
+
+eval $(thefuck --alias)
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
